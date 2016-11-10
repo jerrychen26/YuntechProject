@@ -1,0 +1,72 @@
+<html><head>
+  
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Data</title>
+  <style>
+.fancytable{border:1px solid #cccccc; width:100%;border-collapse:collapse;}
+.fancytable td{border:1px solid #cccccc; color:#555555;text-align:center;line-height:28px;}
+.headerrow{ background-color:#0066cc;}
+.headerrow td{ color:#ffffff; text-align:center;}
+.datarowodd{background-color:#ffffff;}
+.dataroweven{ background-color:#efefef;}
+.datarowodd td{background-color:#ffffff;}
+.dataroweven td{ background-color:#efefef;}
+    .sexyborder{
+     border:1px solid #0066cc; padding:5px;
+     -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+     border-radius: 5px;
+}
+  .headereven{ background-color:#8282FF;}
+.headereven td{ color:#ffffff; text-align:center;}
+</style>
+    </head>
+    <body>
+              <br><br>
+        <form action="action/addData.jsp">  
+            <div class="sexyborder">
+<table class="fancytable">
+<tbody>
+<tr class="headerrow">
+  <td align="center" colspan="5">New data
+  </td></tr>
+<tr class="datarowood">
+<td align="center" colspan="1">Table Name</td>
+<td align="center" colspan="1">RowKey</td>
+<td align="center" colspan="1">Family</td>
+<td align="center" colspan="1">Qualifier</td>
+<td align="center" colspan="1">Value</td>
+</tr>
+<tr class="dataroweven">
+<td><input type="text" name="TableName" value=""></td>
+<td><input type="text" name="rowKey" value=""></td>
+<td><input type="text" name="family" value=""></td>
+<td><input type="text" name="qualifier" value=""></td>
+<td><input type="text" name="value" value=""></td>  
+</tr>  
+</tbody></table></div><br>
+             <input type="submit" value="送出">
+            <input type="reset" value="­重設">
+         </form>
+            <hr>
+            <form action="action/delRecord.jsp">
+            <div class="sexyborder"><table class="fancytable">
+<tbody><tr class="headereven">
+<td align="center" colspan="3">Delete Data</td>
+</tr>
+<tr class="datarowood">
+<td align="center" colspan="1">Table Name</td>
+<td align="center" colspan="1">RowKey</td>
+</tr>
+<tr class="dataroweven">
+<td><input type="text" name="TableName" value=""></td>
+<td><input type="text" name="rowKey" value=""></td>  
+</tr>  
+</tbody></table></div><br>
+             <input type="submit" value="送出">
+            <input type="reset" value="­重設">
+
+         
+            
+    
+</form></body></html>

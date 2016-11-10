@@ -1,0 +1,48 @@
+<HTML>                          
+ <HEAD>                         
+ 	
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+ <TITLE>表單的重置和提交</TITLE>
+ <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript">
+  //var myVar = setInterval(function(){ myTimer() }, 1000);
+  
+
+
+  var myVar = setInterval(function(){ myTimer() }, 3000);
+  
+function myTimer() {
+    var d = new Date();
+    var t = d.toLocaleTimeString();
+    document.getElementById("demo").innerHTML = t;
+    
+    
+
+  $(function(){
+    $.ajax({
+      type:     "POST",
+      url:    "http://mengze.ddns.net:8084/hbase/getRecord",//使用JSONP務必在結尾使用 GET 的 callback=?
+      dataType:   "jsonp", 
+      success:  function (data)
+            {
+              console.log(data);
+              //document.write( data.value);
+              
+
+            },
+      error:    function (data)
+            {
+              console.log(data);
+            }
+ 
+    })
+  })
+}
+ 
+  </script>
+ </HEAD>
+ <BODY>
+<p id="demo"></p>
+ </BODY>
+ </HTML>

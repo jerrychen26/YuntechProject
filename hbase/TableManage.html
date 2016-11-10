@@ -1,0 +1,63 @@
+<html><head>
+  
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Table</title>
+  <style>
+.fancytable{border:1px solid #cccccc; width:100%;border-collapse:collapse;}
+.fancytable td{border:1px solid #cccccc; color:#555555;text-align:center;line-height:28px;}
+.headerrow{ background-color:#0066cc;}
+.headerrow td{ color:#ffffff; text-align:center;}
+.datarowodd{background-color:#ffffff;}
+.dataroweven{ background-color:#efefef;}
+.datarowodd td{background-color:#ffffff;}
+.dataroweven td{ background-color:#efefef;}
+    .sexyborder{
+     border:1px solid #0066cc; padding:5px;
+     -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+     border-radius: 5px;
+}
+  .headereven{ background-color:#8282FF;}
+.headereven td{ color:#ffffff; text-align:center;}
+</style>
+
+    </head>
+    <body>
+              <br><br>
+        <form action="action/createTable.jsp">
+            
+  <div class="sexyborder"><table class="fancytable">
+<tbody><tr class="headerrow">
+<td align="center" colspan="3">New Table</td>
+</tr>
+<tr class="datarowodd">
+<td >Table Name</td>
+<td >Family</td>
+</tr>
+  <tr class="dataroweven">
+  <td><input type="text" name="TableName" value=""></td>  
+  <td><input type="text" name="familys" value=""></td>
+  </tr>
+</tbody></table></div>
+            家族可多個,要以半形逗號隔開<br/>
+            
+            <input type="submit" value="送出">
+            <input type="reset" value="­重設">
+        
+            <hr></form>
+              <form action="action/deleteTable.jsp">
+              <div class="sexyborder"><table class="fancytable">
+<td align="center" colspan="3">Delete Table</td>
+</tr>
+<tr class="datarowodd">
+<td>Table Name</td>
+
+<td><input type="text" name="TableName" value=""></td>
+
+</tr>
+</tbody></table></div><br>
+           <input type="submit" value="送出">
+            <input type="reset" value="­重設">
+         
+         
+            </form></body></html>
